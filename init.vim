@@ -62,6 +62,7 @@ let g:sneak#label = 1
 tnoremap <C-[> <C-\><C-n>
 
 nnoremap tn :tabnew 
+nnoremap tN :tabnew<CR>
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprevious<CR>
 nnoremap tJ :tabm -1<CR>
