@@ -3,6 +3,7 @@
 
 :set relativenumber
 :set number
+:set mouse=a
 
 function MoveToPrevTab()
   "there is only one window
