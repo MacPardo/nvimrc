@@ -64,6 +64,8 @@ tnoremap <C-[> <C-\><C-n>
 nnoremap tn :tabnew 
 nnoremap tk :tabnext<CR>
 nnoremap tj :tabprevious<CR>
+nnoremap tJ :tabm -1<CR>
+nnoremap tK :tabm +1<CR>
 nnoremap tl :tablast<CR>
 nnoremap th :tabfirst<CR>
 nnoremap tH :call MoveToPrevTab()<CR>
