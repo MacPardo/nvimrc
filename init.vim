@@ -1,4 +1,4 @@
-:set expandtab tabstop=4 shiftwidth=4
+:set expandtab tabstop=2 shiftwidth=2
 :set clipboard+=unnamedplus
 
 :set relativenumber
@@ -49,12 +49,20 @@ function MoveToNextTab()
   exe "b".l:cur_buf
 endfunc
 
+function Testing()
+  echom("hello")
+  tabnew
+endfunc
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'justinmk/vim-sneak'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'scrooloose/nerdtree'
 Plug 'phpactor/phpactor'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end()
 
@@ -83,7 +91,14 @@ inoremap <C-k> <Space><Space>
 
 colorscheme molokai
 
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"utocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+nnoremap nto :NERDTree<CR>
+nnoremap ntc :NERDTreeClose<CR>
+
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
