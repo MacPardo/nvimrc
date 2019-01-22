@@ -63,6 +63,7 @@ Plug 'phpactor/phpactor'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
+Plug 'rhysd/vim-clang-format'
 
 call plug#end()
 
@@ -86,6 +87,8 @@ nnoremap <C-k> 4<C-y>
 
 nnoremap <C-l> :noh<CR>
 nnoremap vimrc :e ~/.config/nvim/init.vim<CR>
+
+nnoremap <leader>f :ClangFormat<CR>
 
 inoremap <C-k> <Space><Space>
 
