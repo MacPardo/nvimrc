@@ -1,4 +1,4 @@
-:set expandtab tabstop=2 shiftwidth=2
+:set expandtab tabstop=4 shiftwidth=4
 :set clipboard+=unnamedplus
 
 :set relativenumber
@@ -64,6 +64,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
+Plug 'leafgarland/typescript-vim'
 
 call plug#end()
 
@@ -89,6 +90,7 @@ nnoremap <C-l> :noh<CR>
 nnoremap vimrc :e ~/.config/nvim/init.vim<CR>
 
 nnoremap <leader>f :ClangFormat<CR>
+let g:clang_format#code_style = "google"
 
 inoremap <C-k> <Space><Space>
 
