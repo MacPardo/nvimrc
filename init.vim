@@ -1,9 +1,18 @@
-:set expandtab tabstop=4 shiftwidth=4
+:set expandtab tabstop=2 shiftwidth=2
 :set clipboard+=unnamedplus
 
 :set relativenumber
 :set number
 :set mouse=a
+:set nowrap
+set textwidth=64
+
+:let mapleader=","
+
+function! s:MyPythonConfigs()
+  set tabstop=4
+  set shiftwidth=4
+endfunction
 
 function MoveToPrevTab()
   "there is only one window
@@ -59,12 +68,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'justinmk/vim-sneak'
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'scrooloose/nerdtree'
-Plug 'phpactor/phpactor'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'junegunn/vim-easy-align'
 Plug 'rhysd/vim-clang-format'
 Plug 'leafgarland/typescript-vim'
+Plug 'idris-hackers/idris-vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'lervag/vimtex'
+Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
 
 call plug#end()
 
@@ -90,11 +102,17 @@ nnoremap <C-l> :noh<CR>
 nnoremap vimrc :e ~/.config/nvim/init.vim<CR>
 
 nnoremap <leader>f :ClangFormat<CR>
-let g:clang_format#code_style = "google"
+"let g:clang_format#auto_format = 1
+let g:clang_format#code_style = "Google"
 
 inoremap <C-k> <Space><Space>
 
-colorscheme molokai
+"ayu
+"gruvbox
+"colorscheme dracula
+set termguicolors
+let ayucolor="dark"
+colorscheme ayu
 
 "autocmd vimenter * NERDTree
 
