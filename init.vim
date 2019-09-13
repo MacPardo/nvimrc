@@ -77,12 +77,14 @@ Plug 'idris-hackers/idris-vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'lervag/vimtex'
 Plug 'neoclide/coc.nvim', {'do': './install.sh nightly'}
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 
 call plug#end()
 
 let g:sneak#label = 1
 
 tnoremap <C-[> <C-\><C-n>
+tnoremap <C-l> <C-\><C-n>
 
 nnoremap tn :tabnew 
 nnoremap tN :tabnew<CR>
@@ -105,7 +107,7 @@ nnoremap <leader>f :ClangFormat<CR>
 "let g:clang_format#auto_format = 1
 let g:clang_format#code_style = "Google"
 
-inoremap <C-k> <Space><Space>
+inoremap <C-l> <Esc>
 
 "ayu
 "gruvbox
